@@ -1,5 +1,5 @@
 import vercel from "vite-plugin-vercel";
-import trpc from "./trpc/vite-plugin";
+import trpc from "./src/trpc/vite-plugin";
 import ssr from "vike/plugin";
 import react from "@vitejs/plugin-react";
 import macros from "vite-plugin-babel-macros";
