@@ -1,0 +1,13 @@
+{
+  "name": "@/config-storybook",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.10",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "storybook": "^7.6.10"
+  }
+}

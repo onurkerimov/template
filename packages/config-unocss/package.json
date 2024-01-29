@@ -1,0 +1,17 @@
+{
+  "name": "@/config-unocss",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "@unocss/core": "^0.58.4",
+    "@unocss/preset-attributify": "^0.58.4",
+    "@unocss/preset-icons": "^0.58.4",
+    "@unocss/preset-uno": "^0.58.4",
+    "@unocss/reset": "^0.58.4",
+    "unocss": "^0.58.4"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.12"
+  }
+}
