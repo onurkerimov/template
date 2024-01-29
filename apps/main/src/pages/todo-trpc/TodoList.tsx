@@ -1,5 +1,5 @@
-import type { TodoItem } from "../../database/todoItems";
-import { trpc } from "../../trpc/client";
+import type { TodoItem } from "../../../../../packages/database/src/todoItems";
+import { trpc } from "../../../../../packages/trpc/src/client";
 import React, { useState } from "react";
 
 export function TodoList({

@@ -1,7 +1,7 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import CredentialsProvider from "@auth/core/providers/credentials";
-import { appRouter } from "./src/trpc/server";
+import { appRouter } from "#/trpc/src/server";
 import { createMiddleware } from "@hattip/adapter-node";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import express from "express";
@@ -29,6 +29,7 @@ async function startServer() {
       await vite.createServer({
         root,
         server: { middlewareMode: true },
+        resolve: { preserveSymlinks: true }
       })
     ).middlewares;
     app.use(viteDevMiddleware);
@@ -60,12 +61,9 @@ async function startServer() {
     ],
   });
 
-  app.all(
-    "/api/auth/*",
-    createMiddleware(Auth, {
-      alwaysCallNext: false,
-    }),
-  );
+  app.all("/api/auth/*", createMiddleware(Auth, {
+    alwaysCallNext: false,
+  }));
 
   app.use(
     "/api/trpc",

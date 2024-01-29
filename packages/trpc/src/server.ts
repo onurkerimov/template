@@ -1,4 +1,4 @@
-import { todoItems } from "../database/todoItems";
+import { todoItems } from "../../database/src/todoItems";
 import { initTRPC } from "@trpc/server";
 
 /**

@@ -1,5 +1,5 @@
 import vercel from "vite-plugin-vercel";
-import trpc from "./src/trpc/vite-plugin";
+import trpc from "./vite.trpc";
 import ssr from "vike/plugin";
 import react from "@vitejs/plugin-react";
 import macros from "vite-plugin-babel-macros";
@@ -30,13 +30,15 @@ export default defineConfig({
     setupFiles: ['./config/setupTests.ts'],
     passWithNoTests: true,
   },
+  root: '../../',
   resolve: {
+    preserveSymlinks: true,
     alias: {
       // doja: 'doja-react'
       // react: 'preact/compat',
       // 'react-dom': 'preact/compat',
-      "#/*": "packages/*",
-      "#apps/*": "apps/*"
+      // "#/*": "packages/*",
+      // "#apps/*": "apps/*"
     }
   }
 });
